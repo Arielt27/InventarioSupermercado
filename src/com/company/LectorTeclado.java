@@ -37,6 +37,20 @@ public class LectorTeclado
         }
 
         opc = m_sc.nextInt();
+        return opc;
+    }
+
+    public double leerDecimal(String mensaje)
+    {
+        double opc = 0;
+
+        while (!m_sc.hasNextDouble())
+        {
+            m_sc.next();
+            System.out.println(mensaje);
+        }
+
+        opc = m_sc.nextDouble();
         System.out.println(" ");
         return opc;
     }
